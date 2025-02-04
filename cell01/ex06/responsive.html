@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        table, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            height: 100px;
-        }
-        table {
-            width: 100%;
-        }
-        td {
-            width: 50%;
-        }
+      body {
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        height: 100vh;
+      }
+
+      .cell1, .cell2 {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        flex: 1; 
+      }
+
+      .cell1 {
+        background-color: lightgreen;
+      }
+
+      .cell2 {
+        background-color: lightcoral;
+      }
+
     </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <td style="background-color: lightgreen;">First cell</td>
-            <td style="background-color: lightcoral;">Second cell</td>
-        </tr>
-    </table>
-</body>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="cell1">pink</div>
+      <div class="cell2">blanchedalmond</div>
+    </div>
+  </body>
 </html>
