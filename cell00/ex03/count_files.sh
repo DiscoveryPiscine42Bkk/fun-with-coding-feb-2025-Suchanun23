@@ -1,1 +1,1 @@
-ls -1 | wc -l
+echo $(find . -mindepth 1 -maxdepth 1 | wc -l)
