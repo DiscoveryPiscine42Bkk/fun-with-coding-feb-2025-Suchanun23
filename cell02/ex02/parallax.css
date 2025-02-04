@@ -1,0 +1,35 @@
+body {
+    margin: 0px !important;
+    background-color: #000000;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .first-image, .second-image {
+    background-image: url("https://pixnio.com/free-images/2017/02/18/2017-02-18-10-31-45.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-image {
+    background-image: url("https://cdn.pixabay.com/photo/2018/08/14/09/59/mountains-3605113_1280.jpg");
+  }
+  
+  h3 {
+    color: rgb(25, 22, 20);
+  }
+  
+  .content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 15vh;
+    padding-left: 0;
+  }
