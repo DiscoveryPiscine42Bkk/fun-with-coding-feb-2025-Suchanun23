@@ -1,35 +1,36 @@
 body {
-    margin: 0px !important;
-    background-color: #000000;
-  }
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .first-image, .second-image {
-    background-image: url("https://pixnio.com/free-images/2017/02/18/2017-02-18-10-31-45.jpg");
-    min-height: 300px;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    margin: 0px !important; /* กำหนด margin ของ body เป็น 0px เพื่อให้ไม่มีช่องว่างรอบขอบของหน้า */
+    background-color: #000000; /* ตั้งค่าสีพื้นหลังของหน้าเว็บเป็นสีดำ */
+}
 
-  .second-image {
-    background-image: url("https://cdn.pixabay.com/photo/2018/08/14/09/59/mountains-3605113_1280.jpg");
-  }
-  
-  h3 {
-    color: rgb(25, 22, 20);
-  }
-  
-  .content {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    padding: 15vh;
-    padding-left: 0;
-  }
+.container {
+    width: 100%; /* กำหนดให้ container กว้างเต็ม 100% ของหน้าจอ */
+    height: 100%; /* กำหนดให้ container มีความสูงเต็ม 100% ของพื้นที่ที่ครอบคลุม */
+}
+
+.first-image, .second-image {
+    background-image: url("https://pixnio.com/free-images/2017/02/18/2017-02-18-10-31-45.jpg"); /* ตั้งค่าภาพพื้นหลังเริ่มต้น */
+    min-height: 300px; /* กำหนดความสูงขั้นต่ำเป็น 300px */
+    background-attachment: fixed; /* ทำให้ภาพพื้นหลังอยู่กับที่เมื่อเลื่อนหน้าเว็บ (Parallax Effect) */
+    background-position: center; /* จัดตำแหน่งภาพพื้นหลังให้อยู่ตรงกลาง */
+    background-size: cover; /* ปรับภาพพื้นหลังให้พอดีกับขนาดขององค์ประกอบ โดยรักษาสัดส่วน */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงเนื้อหา */
+    justify-content: center; /* จัดให้อยู่ตรงกลางในแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+}
+
+.second-image {
+    background-image: url("https://cdn.pixabay.com/photo/2018/08/14/09/59/mountains-3605113_1280.jpg"); /* เปลี่ยนภาพพื้นหลังสำหรับ .second-image */
+}
+
+h3 {
+    color: rgb(25, 22, 20); /* กำหนดสีของตัวอักษรเป็นสีน้ำตาลเข้ม */
+}
+
+.content {
+    width: 100%; /* กำหนดให้เนื้อหามีความกว้างเต็มพื้นที่ */
+    text-align: center; /* จัดเนื้อหาให้อยู่ตรงกลาง */
+    color: #fff; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    padding: 15vh; /* กำหนดระยะห่างรอบเนื้อหาเป็น 15% ของความสูงของ viewport */
+    padding-left: 0; /* ไม่ให้มีระยะห่างด้านซ้าย */
+}

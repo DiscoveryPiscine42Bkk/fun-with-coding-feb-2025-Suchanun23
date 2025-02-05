@@ -1,18 +1,40 @@
-const ft_list = document.getElementById('ft_list');
-const newButton = document.getElementById('newButton');
+let ft_list = document.getElementById("ft_list");
 
-newButton.addEventListener('click', () => {
-  const todo = prompt('Enter new todo:');
-  if (todo) {
-    const newDiv = document.createElement('div');
-    newDiv.textContent = todo;
-    ft_list.insertBefore(newDiv, ft_list.firstChild);
-  }
-});
+const create = () => {
+  let text = prompt("Please Enter TODO LIST :");
+  if (text.length === 0) return;
+  
+  const timestamp = new Date().getTime();
+  document.cookie = `${timestamp}=${encodeURIComponent(text)}; path=/`;
+  
+  let item = document.createElement("div");
+  item.innerHTML = text;
+  item.onclick = () => deleteItem(item, timestamp);
+  
+  ft_list.prepend(item);
+};
 
-ft_list.addEventListener('click', (event) => {
-  const target = event.target;
-  if (confirm('Are you sure you want to delete this todo?')) {
-    ft_list.removeChild(target);
+const deleteItem = (item, timestamp) => {
+  const check = confirm("Do you want to delete?");
+  if (check) {
+    item.remove();
+    document.cookie = `${timestamp}=; expires=Sun, 14 Nov 2004 00:00:00 UTC; path=/`;
   }
-});
+};
+
+const loadItems = () => {
+  const cookies = document.cookie.split("; ");
+  cookies.forEach((element) => {
+    let [key, ...valueParts] = element.split("=");
+
+    let text = decodeURIComponent(valueParts.join("="));
+    
+    let item = document.createElement("div");
+    item.innerHTML = text;
+    item.onclick = () => deleteItem(item, key);
+    
+    ft_list.prepend(item);
+  });
+};
+
+loadItems();
