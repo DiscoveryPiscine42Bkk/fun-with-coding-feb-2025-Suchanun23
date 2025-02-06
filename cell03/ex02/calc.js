@@ -11,7 +11,7 @@ form.addEventListener('submit', function(event) {
   const operator = operatorSelect.value;
 
   if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
-    alert('Error: Please enter only positive integers.');
+    alert('Error:(');
     return;
   }
 
